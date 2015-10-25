@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
@@ -11,6 +13,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
+    plumber = require('gulp-plumber'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
 
@@ -52,13 +55,16 @@ var config = {
 //таск для сборки html
 gulp.task('html:build', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
+        .pipe(plumber()) //ошибки
         .pipe(rigger()) //Прогоним через rigger
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
+//таск для сборки js
 gulp.task('js:build', function () {
-    gulp.src(path.src.js) 
+    gulp.src(path.src.js)
+        .pipe(plumber()) //ошибки
         .pipe(rigger()) 
         // .pipe(sourcemaps.init()) 
         .pipe(uglify()) 
@@ -67,9 +73,11 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true}));
 });
 
+//таск для сборки css
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
         // .pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(plumber()) //ошибки
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
@@ -129,13 +137,11 @@ gulp.task('webserver', function () {
 
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
-})
+});
+
+
 
 gulp.task('default', ['build', 'webserver', 'watch']);
-
-
-
-
 
 
 
