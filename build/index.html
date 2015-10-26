@@ -7,58 +7,86 @@
 </head>
 <body>
 <header class="site-header">
-    <img src="../img/assets/logo.png" alt="logo" class="site-header-logo">
-    <nav class="header-nav">
-        <ul class="header-nav-ul">
-            <li>GALLERY</li>
-            <li>ABOUT</li>
-            <li>CONTACT1</li>
-            <li>BLOG</li>
-        </ul>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="#">
+                    <img alt="Julia Kaptelova logo" src="../img/assets/logo.png">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+        </div>
     </nav>
 </header>
 <main class="site-main">
-    <section class="right-bar">
-        <div class="right-bar-categories">
-            <p>WEDDINGS</p>
-            <p>ENGAGEMENTS</p>
-            <p>PORTRAITS</p>
-            <p>BOUDOIR</p>
-            <p>TRAVEL</p>
-            <p>PUBLIKATIONS</p>
-            <p>ALL POSTS</p>
-        </div>
-        <div class="right-bar-social-links">
-            <ul>
-                <li><img src="" alt="in"></li>
-                <li><img src="" alt="fb"></li>
-                <li><img src="" alt="vk"></li>
-            </ul>
-        </div>
-        <div class="right-bar-in"></div>
-        <div class="right-bar-personal-in"></div>
-        <div class="right-bar-contact"></div>
-        <div class="right-bar-search"></div>
-    </section>
-    <article class="main-article">
-        <header class="main-article-header">
-            <h1 class="main-article-header-h1">ANNA & SEMEN, RHODES</h1>
-            <h3 class="main-article-header-h3">CATEGORY: WEDDINGS</h3>
-        </header>
-        <section class="main-article-content">
-        </section>
+    <div class="container">
+        <div class="row">
 
-        <footer class="main-article-footer">
-            <div class="social-icon">
-                <div class="fb-like"></div>
-                <div class="share"></div>
-            </div>
-            <div class="comment-btn"></div>
-            <div class="decor"></div>
-            <hr>
-        </footer>
-    </article>
+            <article class="main-article col-md-8">
+                <header class="main-article-header">
+                    <h1 class="main-article-header-h1">ANNA & SEMEN, RHODES</h1>
 
+                    <h3 class="main-article-header-h3">CATEGORY: WEDDINGS</h3>
+                </header>
+                <section class="main-article-content">
+                </section>
+                <footer class="main-article-footer">
+                    <ul class="social-icon">
+                        <li class="fb-like">fb</li>
+                        <li class="share">share</li>
+                        <li class="comment-btn">in</li>
+                    </ul>
+                    <div class="decor"></div>
+                    <hr>
+                </footer>
+            </article>
+
+            <section class="right-bar col-md-4">
+                <div class="right-bar-categories">
+                    <p>WEDDINGS</p>
+
+                    <p>ENGAGEMENTS</p>
+
+                    <p>PORTRAITS</p>
+
+                    <p>BOUDOIR</p>
+
+                    <p>TRAVEL</p>
+
+                    <p>PUBLIKATIONS</p>
+
+                    <p>ALL POSTS</p>
+                </div>
+                <div class="right-bar-social-links">
+                    <ul>
+                        <li><img src="" alt="in"></li>
+                        <li><img src="" alt="fb"></li>
+                        <li><img src="" alt="vk"></li>
+                    </ul>
+                </div>
+                <div class="right-bar-in"></div>
+                <div class="right-bar-personal-in"></div>
+                <div class="right-bar-contact"></div>
+                <div class="right-bar-search"></div>
+            </section>
+        </div>
+    </div>
     <section class="archive">
         <header class="also-like-header">
             <h1 class="also-like-header-h1"></h1>

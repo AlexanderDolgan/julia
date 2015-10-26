@@ -1,0 +1,31 @@
+//site header
+.site-header {
+  .container {
+    max-width: 1024px;
+    height: 150px;
+  }
+
+  .navbar {
+    margin-top: 30px;
+    background-color: #FFF;
+    border: none;
+  }
+
+  .navbar-nav {
+    margin-top: 70px;
+  }
+  .logo > img {
+    display: block;
+    margin-top: 15px;
+    width: 415px;
+  }
+}
+
+//site main
+.main-article {
+  background: indianred;
+}
+
+.right-bar {
+  background: cornflowerblue;
+}
