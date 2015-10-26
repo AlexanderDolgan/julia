@@ -1,7 +1,9 @@
+.container {
+  max-width: 1024px;
+}
 //site header
 .site-header {
   .container {
-    max-width: 1024px;
     height: 150px;
   }
 
@@ -28,4 +30,9 @@
 
 .right-bar {
   background: cornflowerblue;
+}
+
+//footer
+.site-footer {
+  
 }
