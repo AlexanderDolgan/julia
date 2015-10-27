@@ -6,45 +6,33 @@
     <title>Julia Kaptelova photography</title>
 </head>
 <body>
-<header class="site-header">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="logo" href="#">
-                    <img alt="Julia Kaptelova logo" src="../img/assets/logo.png">
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-</header>
-<main class="site-main">
-    <div class="container">
+<div class="container">
+    <header class="site-header">
         <div class="row">
-
-            <article class="main-article col-md-8">
+            <a href="#" class="logo"><img src="../img/assets/logo.jpg" alt="logo"></a>
+            <ul class="site-nav">
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="header-img">
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+        <!--article-->
+        <div class="row">
+            <article class="main-article col-md-9">
                 <header class="main-article-header">
                     <h1 class="main-article-header-h1">ANNA & SEMEN, RHODES</h1>
 
                     <h3 class="main-article-header-h3">CATEGORY: WEDDINGS</h3>
                 </header>
                 <section class="main-article-content">
+                    <p class="main-article-content-p">Эта потрясающая поездка навсегда останется у меня в памяти, хотя и было немало негативных моментов, которые, к счастью, стираются из памяти, оставляя место лишь хорошим воспоминаняим.</p>
                 </section>
                 <footer class="main-article-footer">
                     <ul class="social-icon">
@@ -57,7 +45,7 @@
                 </footer>
             </article>
 
-            <section class="right-bar col-md-4">
+            <section class="right-bar col-md-3">
                 <div class="right-bar-categories">
                     <p>WEDDINGS</p>
 
@@ -86,33 +74,40 @@
                 <div class="right-bar-search"></div>
             </section>
         </div>
-    </div>
-    <section class="archive">
-        <header class="also-like-header">
-            <h1 class="also-like-header-h1"></h1>
-        </header>
-        <div class="also-like-content">
+        <!--archive-->
+        <div class="row">
+            <section class="archive">
+                <header class="also-like-header">
+                    <h1 class="also-like-header-h1"></h1>
+                </header>
+                <div class="also-like-content">
+                </div>
+                <nav class="archive">
+                    <div class="newer-btn"></div>
+                    <div class="older-btn"></div>
+                </nav>
+            </section>
         </div>
-        <nav class="archive">
-            <div class="newer-btn"></div>
-            <div class="older-btn"></div>
-        </nav>
-    </section>
-
-    <section class="comments">
-    </section>
-
-</main>
-<footer class="site-footer">
-    <div class="container">
-        <div class="sign">JULIA KAPTELOVA PHOTOGRAPHY, 2015, ALL RIGHT RESERVED</div>
-        <ul class="footer-social-icon">
-            <li class="fb-icon"></li>
-            <li class="vk-icon"></li>
-            <li class="in-icon"></li>
-        </ul>
+        <!--comments-->
+        <div class="row">
+            <section class="comments">
+            </section>
+        </div>
+    </main>
+    <!--footer-->
+    <div class="row">
+        <footer class="site-footer">
+            <div class="container">
+                <div class="sign">JULIA KAPTELOVA PHOTOGRAPHY, 2015, ALL RIGHT RESERVED</div>
+                <ul class="footer-social-icon">
+                    <li class="fb-icon"></li>
+                    <li class="vk-icon"></li>
+                    <li class="in-icon"></li>
+                </ul>
+            </div>
+        </footer>
     </div>
-</footer>
+</div>
 
 <script src="js/main.js"></script>
 
