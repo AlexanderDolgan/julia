@@ -41,9 +41,11 @@ a:hover, a:focus {
   text-decoration: none;
   color: darken($text-color, 25%);
 }
+
 img {
   transition: all 0.5s ease;
 }
+
 h1, h2, h3 {
   margin: 0;
 }
@@ -61,56 +63,60 @@ p, pre {
   max-width: 1024px;
 }
 
-//////////////////////////////////////site-header
-.site-header {
-  display: block;
-  height: 200px;
-  padding: 75px 0;
-  vertical-align: bottom;
+.col-md-10 {
+  padding: 0 35px 0 0;
 }
 
-.logo > img {
-  width: 415px;
+//////////////////////////////////////site-header
+.site-header {
+  height: 200px;
+  padding-top: 10%;
+}
+
+.site-header::after {
+  content: "";
+  display: block;
+  border-top: 1px solid #ededed;
+  background: url("../img/assets/h-shadow.png") no-repeat 100% 100%;
+  height: 70px;
+}
+
+.logo {
   float: left;
+  display: block;
+  text-align: center;
+}
+
+.header-nav {
 }
 
 .site-nav {
   float: right;
-  display: table-row;
   margin: 40px 0 10px 0;
 }
 
 .site-nav > li {
-  display: table-cell;
+  display: inline-block;
   width: 85px;
   height: 25px;
   text-align: center;
-  vertical-align: middle;
 }
 
 .site-nav > li > a {
+  display: block;
   font-family: $font-mon-r;
   text-transform: uppercase;
   font-size: .9em;
 }
 
-.nav::after {
-  content: "";
-  display: block;
-  border-top: 1px solid #ededed;
-  background: url("../img/assets/h-shadow.png") no-repeat 100% 100%;
-  height: 60px;
+
+//////////////////////////////////////site main
+.site-main {
+  margin-top: 20px;
 }
 
-.affix {
-  z-index: 1;
-  top: 0;
-  height: 100px;
-  background: white;
-}
-//////////////////////////////////////site main
 .main-article {
-  padding: 0 45px;
+  margin-top: 30px;
 }
 
 .main-article-header {
@@ -138,7 +144,7 @@ p, pre {
 
 .main-article-content-img {
   display: inline-block;
-  max-width: 50%;
+  width: 50%;
   font-size: 0;
 }
 
@@ -190,6 +196,7 @@ p, pre {
   margin-top: 20px;
   clear: both;
 }
+
 .nav-buttons::after {
   content: "";
   display: block;
@@ -197,10 +204,12 @@ p, pre {
   background: url("../img/assets/h-shadow2.png") no-repeat 100% 100%;
   height: 60px;
 }
+
 ////////////////////////////////////side-bar
 .right-bar {
-  text-align: center;
+  margin-top: 80px;
   padding: 0;
+  text-align: center;
 }
 
 .right-bar-cat-name {
@@ -229,14 +238,14 @@ p, pre {
   display: block;
 }
 
-.right-bar-photo-in img{
+.right-bar-photo-in img {
   margin-top: 15px;
   overflow: hidden;
 
 }
 
 .right-bar-photo-in img:hover,
-.right-bar-photo-in img:focus,{
+.right-bar-photo-in img:focus, {
   filter: saturate(1.5);
 }
 
@@ -246,7 +255,7 @@ p, pre {
 }
 
 .right-bar-photo-per-in img:hover,
-.right-bar-photo-per-in img:focus,{
+.right-bar-photo-per-in img:focus, {
   filter: saturate(1.5);
 }
 
@@ -263,7 +272,7 @@ p, pre {
   background-position: 13px 8px;
 }
 
-.right-bar-photo-per-in img{
+.right-bar-photo-per-in img {
   margin-top: 15px;
 }
 
@@ -293,19 +302,20 @@ p, pre {
   margin: 0 auto;
   margin-top: 10px;
 }
+
 .right-bar-search-input {
   border: 1px solid #ebebeb;
   background: #f6f6f6;
   border-radius: 2px;
 }
+
 .right-bar-search-input:focus,
 .right-bar-search-input:active,
 .right-bar-search-input:hover {
-  box-shadow: inset 0 0 2px  rgba(0,0,0,0.1),
-  0 0 4px rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1),
+  0 0 4px rgba(0, 0, 0, 0.1);
   outline: 0;
 }
-
 
 //////////////////////////////////////archive
 .archive {
@@ -317,6 +327,7 @@ p, pre {
   font-family: $font-mon-r;
   color: $gold-color;
   font-weight: 400;
+  text-align: center;
   font-size: .95em;
 }
 
@@ -327,19 +338,22 @@ p, pre {
 
 .archive-item {
   display: inline-block;
-  margin-right: 5px;
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
-.archive-item h3{
+.archive-item h3 {
   font-size: .8em;
   font-weight: 400;
-  margin: 30px 0 10px 0;
+  line-height: 3;
+  text-align: center;
 }
 
 .archive-item img {
   filter: gray;
   filter: grayscale(100%);
 }
+
 .archive-item img:hover {
   filter: color;
   filter: grayscale(0%);
@@ -395,10 +409,12 @@ p, pre {
   text-align: center;
   margin-top: 90px;
 }
+
 .sign {
   font-size: .7em;
   line-height: 4;
 }
+
 .right-bar-social-links::after {
   content: "";
   display: block;
@@ -430,7 +446,7 @@ p, pre {
 .vk-normal {
   background: url("../img/assets/sprites.png") no-repeat;
   display: block;
-  transition:none;
+  transition: none;
 }
 
 .top-hower {
